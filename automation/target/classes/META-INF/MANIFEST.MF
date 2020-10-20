@@ -1,0 +1,119 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1603180790873
+Build-Jdk: 11.0.1
+Built-By: harshadak
+Bundle-Activator: com.vyom.bundle.Automation
+Bundle-ClassPath: .,testng-6.8.8.jar,hamcrest-core-1.3.jar,commons-lang3
+ -3.7.jar,automation-framework-20.08.00-SNAPSHOT.jar,json-20090211.jar,j
+ given-testng-0.14.0.jar,awaitility-2.0.0.jar,jersey-media-multipart-2.1
+ 3.jar,jackson-datatype-json-org-2.4.0.jar,plexus-utils-2.0.5.jar,slf4j-
+ api-1.7.25.jar,logback-classic-1.2.3.jar,logback-core-1.2.3.jar
+Bundle-Description: The vyomlib application Automation.
+Bundle-ManifestVersion: 2
+Bundle-Name: vyomlib
+Bundle-SymbolicName: com.vyom.vyomlib
+Bundle-Vendor: com.vyom
+Bundle-Version: 1.0.0.SNAPSHOT
+Class-Path: lib/testng-6.8.8.jar lib/bsh-2.0b4.jar lib/jcommander-1.27.j
+ ar lib/hamcrest-core-1.3.jar lib/commons-lang3-3.7.jar lib/automation-f
+ ramework-20.08.00-SNAPSHOT.jar lib/json-20090211.jar lib/jgiven-testng-
+ 0.14.0.jar lib/jgiven-core-0.14.0.jar lib/guava-19.0.jar lib/gson-2.7.j
+ ar lib/paranamer-2.8.jar lib/byte-buddy-1.5.1.jar lib/jansi-1.13.jar li
+ b/jgiven-html5-report-0.14.0.jar lib/awaitility-2.0.0.jar lib/hamcrest-
+ library-1.3.jar lib/cglib-nodep-3.1.jar lib/objenesis-2.1.jar lib/jerse
+ y-media-multipart-2.13.jar lib/mimepull-1.9.3.jar lib/jackson-datatype-
+ json-org-2.4.0.jar lib/json-20090211_1.jar lib/plexus-utils-2.0.5.jar l
+ ib/slf4j-api-1.7.25.jar lib/logback-classic-1.2.3.jar lib/logback-core-
+ 1.2.3.jar
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: *;scope=compile|runtime
+Embedded-Artifacts: testng-6.8.8.jar;g="org.testng";a="testng";v="6.8.8"
+ ,hamcrest-core-1.3.jar;g="org.hamcrest";a="hamcrest-core";v="1.3",commo
+ ns-lang3-3.7.jar;g="org.apache.commons";a="commons-lang3";v="3.7",autom
+ ation-framework-20.08.00-SNAPSHOT.jar;g="com.bmc.rx.test";a="automation
+ -framework";v="20.08.00-SNAPSHOT",json-20090211.jar;g="org.json";a="jso
+ n";v="20090211",jgiven-testng-0.14.0.jar;g="com.tngtech.jgiven";a="jgiv
+ en-testng";v="0.14.0",awaitility-2.0.0.jar;g="org.awaitility";a="awaiti
+ lity";v="2.0.0",jersey-media-multipart-2.13.jar;g="org.glassfish.jersey
+ .media";a="jersey-media-multipart";v="2.13",jackson-datatype-json-org-2
+ .4.0.jar;g="com.fasterxml.jackson.datatype";a="jackson-datatype-json-or
+ g";v="2.4.0",plexus-utils-2.0.5.jar;g="org.codehaus.plexus";a="plexus-u
+ tils";v="2.0.5",slf4j-api-1.7.25.jar;g="org.slf4j";a="slf4j-api";v="1.7
+ .25",logback-classic-1.2.3.jar;g="ch.qos.logback";a="logback-classic";v
+ ="1.2.3",logback-core-1.2.3.jar;g="ch.qos.logback";a="logback-core";v="
+ 1.2.3"
+Import-Package: com.bmc.arsys.rx.services.association.domain;version="[1
+ ,999)",com.bmc.arsys.rx.services.bundle.domain;version="[1,999)",com.bm
+ c.arsys.rx.services.common;version="[1,999)",com.bmc.arsys.rx.services.
+ process.domain;version="[1,999)",com.bmc.arsys.rx.services.record.domai
+ n;version="[1,999)",bsh;resolution:=optional,com.beust.jcommander;resol
+ ution:=optional;version="[1.27,2)",com.beust.jcommander.converters;reso
+ lution:=optional;version="[1.27,2)",com.fasterxml.jackson.annotation;re
+ solution:=optional;version="[2.10,3)",com.fasterxml.jackson.core;resolu
+ tion:=optional;version="[2.10,3)",com.fasterxml.jackson.core.util;resol
+ ution:=optional;version="[2.10,3)",com.fasterxml.jackson.databind;resol
+ ution:=optional;version="[2.10,3)",com.fasterxml.jackson.databind.deser
+ .std;resolution:=optional;version="[2.10,3)",com.fasterxml.jackson.data
+ bind.jsontype;resolution:=optional;version="[2.10,3)",com.fasterxml.jac
+ kson.databind.module;resolution:=optional;version="[2.10,3)",com.faster
+ xml.jackson.databind.node;resolution:=optional;version="[2.10,3)",com.f
+ asterxml.jackson.databind.ser.std;resolution:=optional;version="[2.10,3
+ )",com.fasterxml.jackson.jaxrs.base;resolution:=optional;version="[2.5,
+ 3)",com.fasterxml.jackson.jaxrs.json;resolution:=optional;version="[2.5
+ ,3)",com.google.inject;resolution:=optional,com.tngtech.jgiven;resoluti
+ on:=optional,com.tngtech.jgiven.annotation;resolution:=optional,com.tng
+ tech.jgiven.base;resolution:=optional,com.tngtech.jgiven.impl;resolutio
+ n:=optional,com.tngtech.jgiven.impl.util;resolution:=optional,com.tngte
+ ch.jgiven.report.impl;resolution:=optional,com.tngtech.jgiven.report.mo
+ del;resolution:=optional,com.vyom.bundle;resolution:=optional,groovy.la
+ ng;resolution:=optional,javax.inject;resolution:=optional;version="[1.0
+ ,2)",javax.mail;resolution:=optional,javax.mail.internet;resolution:=op
+ tional,javax.management;resolution:=optional,javax.naming;resolution:=o
+ ptional,javax.net;resolution:=optional,javax.net.ssl;resolution:=option
+ al,javax.servlet;resolution:=optional,javax.servlet.http;resolution:=op
+ tional,javax.sql;resolution:=optional,javax.ws.rs;resolution:=optional;
+ version="[2.0,3)",javax.ws.rs.client;resolution:=optional;version="[2.0
+ ,3)",javax.ws.rs.core;resolution:=optional;version="[2.0,3)",javax.ws.r
+ s.ext;resolution:=optional;version="[2.0,3)",javax.xml.namespace;resolu
+ tion:=optional,javax.xml.parsers;resolution:=optional,javax.xml.stream;
+ resolution:=optional,javax.xml.stream.events;resolution:=optional,javax
+ .xml.xpath;resolution:=optional,junit.framework;resolution:=optional,ne
+ t.sf.cglib.proxy;resolution:=optional,org.apache.commons.codec.binary;r
+ esolution:=optional,org.apache.commons.csv;resolution:=optional,org.apa
+ che.oltu.oauth2.common.token;resolution:=optional,org.apache.tools.ant;
+ resolution:=optional,org.apache.tools.ant.taskdefs;resolution:=optional
+ ,org.apache.tools.ant.types;resolution:=optional,org.apache.tools.ant.t
+ ypes.resources;resolution:=optional,org.apache.tools.ant.types.selector
+ s;resolution:=optional,org.codehaus.commons.compiler;resolution:=option
+ al,org.codehaus.groovy.control;resolution:=optional,org.codehaus.groovy
+ .control.customizers;resolution:=optional,org.codehaus.groovy.reflectio
+ n;resolution:=optional,org.codehaus.groovy.runtime;resolution:=optional
+ ,org.codehaus.groovy.runtime.callsite;resolution:=optional,org.codehaus
+ .groovy.runtime.typehandling;resolution:=optional,org.codehaus.groovy.r
+ untime.wrappers;resolution:=optional,org.codehaus.groovy.transform;reso
+ lution:=optional,org.codehaus.janino;resolution:=optional,org.glassfish
+ .hk2.api;resolution:=optional;version="[2.4,3)",org.glassfish.hk2.utili
+ ties.binding;resolution:=optional;version="[2.4,3)",org.glassfish.jerse
+ y.internal.l10n;resolution:=optional;version="[2.22,3)",org.glassfish.j
+ ersey.internal.util;resolution:=optional;version="[2.22,3)",org.glassfi
+ sh.jersey.internal.util.collection;resolution:=optional;version="[2.22,
+ 3)",org.glassfish.jersey.jackson;resolution:=optional;version="[2.22,3)
+ ",org.glassfish.jersey.message;resolution:=optional;version="[2.22,3)",
+ org.glassfish.jersey.message.internal;resolution:=optional;version="[2.
+ 22,3)",org.glassfish.jersey.server;resolution:=optional,org.glassfish.j
+ ersey.server.internal.inject;resolution:=optional,org.glassfish.jersey.
+ server.model;resolution:=optional,org.glassfish.jersey.server.spi.inter
+ nal;resolution:=optional,org.junit;resolution:=optional,org.junit.runne
+ r;resolution:=optional,org.junit.runner.manipulation;resolution:=option
+ al,org.junit.runner.notification;resolution:=optional,org.jvnet.mimepul
+ l;resolution:=optional;version="[1.9,2)",org.objenesis;resolution:=opti
+ onal;version="[2.1,3)",org.w3c.dom;resolution:=optional,org.xml.sax;res
+ olution:=optional,org.xml.sax.helpers;resolution:=optional,org.yaml.sna
+ keyaml;resolution:=optional,org.yaml.snakeyaml.constructor;resolution:=
+ optional,sun.reflect;resolution:=optional
+Main-Class: com.vyom.automation.main.MainAutomationClass
+Require-Capability: osgi.ee;filter:="(osgi.ee=UNKNOWN)"
+RxBundle-DeveloperName: com.vyom
+RxBundle-FriendlyName: vyomlib
+RxBundle-IsApplication: false
+Tool: Bnd-4.0.0.201805111645
