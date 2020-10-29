@@ -1,226 +1,199 @@
 (function () {
-    'use strict';
-    angular.module('com.vyom.vyomlib.view-components.landing-console')
-        .config(function (rxViewComponentProvider) {
-            rxViewComponentProvider.registerComponent([
-                {
-                    name: 'Landing Console',
-                    group: 'vyomlib',
-                    icon: 'field_autocomplete_search',
-                    type: 'com-vyom-vyomlib-landing-console',
-                    designType: 'com-vyom-vyomlib-landing-console-design',
-                    designManagerService: 'comVyomVyomlibLandingConsoleDesign',
-                    bundleId: 'com.vyom.vyomlib',
-                    propertiesByName: [
-                        {
+  'use strict';
+  angular.module('com.vyom.vyomlib.view-components.landing-console')
+    .config(function (rxViewComponentProvider) {
+      rxViewComponentProvider.registerComponent([
+        {
+          name: 'Landing Console',
+          group: 'vyomlib',
+          icon: 'field_autocomplete_search',
+          type: 'com-vyom-vyomlib-landing-console',
+          designType: 'com-vyom-vyomlib-landing-console-design',
+          designManagerService: 'comVyomVyomlibLandingConsoleDesign',
+          bundleId: 'com.vyom.vyomlib',
+          propertiesByName: [
+            {
+              name: 'recordDefinitionFullName',
+              isConfig: true,
+            }, {
+              name: 'ApplicationName',
+              isConfig: true,
+            }, {
+              name: 'Description',
+              isConfig: true,
+            }, {
+              name: 'Color',
+              isConfig: true,
+            }, {
+              name: 'tooltipHeader',
+              isConfig: true,
+            }, {
+              name: 'Icon',
+              isConfig: true,
+            }, {
+              name: 'tooltipDescription',
+              isConfig: true,
+            }, {
+              name: 'recordGrid',
+              isConfig: true,
+            }, {
+              name: 'cardActionGuid',
+              isConfig: true,
+            }, {
+              name: 'cardSorting',
+              isConfig: true,
+            }, {
+              name: 'cardOrder',
+              isConfig: true,
+            }, {
+              name: 'cardStatus',
+              isConfig: true,
+              enableExpressionEvaluation: true
+            }, {
 
-                            name: 'recordDefinitionFullName',
-                            isConfig: true,
+              name: 'cardFavourite',
+              isConfig: true,
 
-                    },
-                        {
+              enableExpressionEvaluation: true
 
-                            name: 'ApplicationName',
-                            isConfig: true,
+            }, {
 
-                    },
-                        {
+              name: 'cardScope',
+              isConfig: true,
 
-                            name: 'Description',
-                            isConfig: true,
+              enableExpressionEvaluation: true
 
-                    }, {
+            },
+            {
 
-                            name: 'Color',
-                            isConfig: true,
+              name: 'FilterExp',
+              isConfig: true,
 
-                    }, {
+            },
 
-                            name: 'tooltipHeader',
-                            isConfig: true,
 
-                    }, {
+            {
 
-                            name: 'Icon',
-                            isConfig: true,
+              name: 'SearchColor',
+              isConfig: true,
 
-                    }, {
+            },
+            {
 
-                            name: 'tooltipDescription',
-                            isConfig: true,
+              name: 'Greetings',
+              isConfig: true,
+              enableExpressionEvaluation: true
 
-                    },
+            },
+            {
 
-                        {
+              name: 'titleColor',
+              isConfig: true,
 
-                            name: 'cardActionGuid',
-                            isConfig: true,
+            },
+            {
 
-}, {
+              name: 'BannerURL',
+              isConfig: true,
 
-                            name: 'cardSorting',
-                            isConfig: true,
+            },
+            {
 
-},
-                        {
+              name: 'BannerImage',
+              isConfig: true,
 
-                            name: 'cardOrder',
-                            isConfig: true,
+            },
+            {
 
-},
-                        {
+              name: 'Views',
+              isConfig: true,
 
-                            name: 'cardStatus',
-                            isConfig: true,
+            },
 
-                            enableExpressionEvaluation: true
+            {
 
-                    },
-                        {
+              name: 'rateMeActionGuid',
+              isConfig: true,
 
-                            name: 'cardFavourite',
-                            isConfig: true,
+            },
+            {
 
-                            enableExpressionEvaluation: true
+              name: 'ratingCount',
+              isConfig: true,
 
-                    }, {
+            },
+            {
 
-                            name: 'cardScope',
-                            isConfig: true,
+              name: 'CardInstanceId',
+              isProperty: true,
 
-                            enableExpressionEvaluation: true
+            }, {
 
-                    },
-                        {
+              name: 'Category1',
+              isConfig: true,
 
-                            name: 'FilterExp',
-                            isConfig: true,
+              enableExpressionEvaluation: true
 
-                    },
+            }, {
 
+              name: 'Category2',
+              isConfig: true,
 
-                        {
+              enableExpressionEvaluation: true
 
-                            name: 'SearchColor',
-                            isConfig: true,
+            }, {
 
-                    },
-                        {
+              name: 'Category3',
+              isConfig: true,
 
-                            name: 'Greetings',
-                            isConfig: true,
-                            enableExpressionEvaluation: true
+              enableExpressionEvaluation: true
 
-                    },
-                        {
+            }, {
 
-                            name: 'titleColor',
-                            isConfig: true,
+              name: 'Category4',
+              isConfig: true,
 
-                    },
-                        {
+              enableExpressionEvaluation: true
 
-                            name: 'BannerURL',
-                            isConfig: true,
+            }, {
 
-                    },
-                        {
+              name: 'Category5',
+              isConfig: true,
 
-                            name: 'BannerImage',
-                            isConfig: true,
+              enableExpressionEvaluation: true
 
-                    },
-                        {
+            }, {
 
-                            name: 'Views',
-                            isConfig: true,
+              name: 'Category6',
+              isConfig: true,
 
-                    },
+              enableExpressionEvaluation: true
 
-                        {
+            }, {
 
-                            name: 'rateMeActionGuid',
-                            isConfig: true,
+              name: 'Category7',
+              isConfig: true,
 
-                    },
-                        {
+              enableExpressionEvaluation: true
 
-                            name: 'ratingCount',
-                            isConfig: true,
+            }, {
 
-                    },
-                        {
+              name: 'Category8',
+              isConfig: true,
 
-                            name: 'CardInstanceId',
-                            isProperty: true,
+              enableExpressionEvaluation: true
 
-                    }, {
+            },
+            {
 
-                            name: 'Category1',
-                            isConfig: true,
+              name: 'CategoryColor',
+              isConfig: true
 
-                            enableExpressionEvaluation: true
+            },
 
-                    }, {
 
-                            name: 'Category2',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category3',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category4',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category5',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category6',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category7',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    }, {
-
-                            name: 'Category8',
-                            isConfig: true,
-
-                            enableExpressionEvaluation: true
-
-                    },
-                        {
-
-                            name: 'CategoryColor',
-                            isConfig: true
-
-                    },
-
-
-                ]
-            }
-        ]);
-        });
+          ]
+        }
+      ]);
+    });
 })();

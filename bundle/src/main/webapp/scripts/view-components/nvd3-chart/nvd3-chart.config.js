@@ -31,16 +31,6 @@
             isRequired: false,  //  required
             defaultValue: '300'
           },
-          // {
-          //   name: 'XPos',
-          //   type: 'number',
-          //   isConfig: true
-          // },
-          // {
-          //   name: 'YPos',
-          //   type: 'number',
-          //   isConfig: true
-          // },
           {
             name: 'recordDefinitionName',
             type: 'string',

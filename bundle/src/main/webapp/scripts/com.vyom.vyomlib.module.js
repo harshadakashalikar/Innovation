@@ -8,8 +8,10 @@
     'com.vyom.vyomlib.view-components.pie',         //Donut Chart VC
     'com.vyom.vyomlib.view-components.test',
     'com.vyom.vyomlib.view-components.chatbot',     //Chat bot icon VC
+    'com.vyom.vyomlib.view-components.chatbot1',     //Chat bot icon VC
     'com.vyom.vyomlib.view-components.bar',         // Bar chart vc
     'com.vyom.vyomlib.view-components.gantt',       //gantt chart VC
-    'com.vyom.vyomlib.view-components.nvd3-chart'
+    'com.vyom.vyomlib.view-components.nvd3-chart',
+    'com.vyom.vyomlib.view-components.landing-console'
   ]);
 })();

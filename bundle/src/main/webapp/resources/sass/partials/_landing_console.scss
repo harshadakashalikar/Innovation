@@ -1,6 +1,112 @@
 com-vyom-vyomlib-landing-console,
 com-vyom-vyomlib-inspector-landing-console-cards,
 com-vyom-vyomlib-inspector-landing-console-attachment {
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+// Center & dribbble
+body {
+    min-height: 100vh;
+    font-family: Roboto, Arial;
+    color: #ADAFB6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F9FF;
+    .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    }
+}
+
+//toggle switch 
+$lightgreen:#00bcd4;
+$purple: #9c27b0;
+
+.switch {
+    cursor: pointer;
+    input {
+        display: none;
+        & + span {
+            width: 68px;
+            height: 30px;
+            border-radius: 14px;
+            transition: all .3s ease;
+            display: block;
+            position: relative;
+            background: $lightgreen;
+            color: black;
+            box-shadow: 0 8px 16px -1px rgba($lightgreen, .2);
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                transition: all .3s ease;
+            }
+            &:before {
+                top: 5px;
+                left: 5px;
+                width: 18px;
+                height: 18px;
+                border-radius: 9px;
+                border: 5px solid #fff;
+            }
+            &:after {
+                top: 5px;
+                left: 32px;
+                width: 6px;
+                height: 18px;
+                border-radius: 40%;
+                transform-origin: 50% 50%;
+                background: #fff;
+                opacity: 0;
+            }
+            &:active {
+                transform: scale(.92);
+            }
+        }
+        &:checked {
+            & + span {
+                background: $purple;
+                color: white;
+                box-shadow: 0 8px 16px -1px rgba($purple, .2);
+                &:before {
+                    width: 0px;
+                    border-radius: 3px;
+                    margin-left: 47px;
+                    border-width: 3px;
+                    background: #fff;
+                }
+            }
+        }
+        &:not(:checked) {
+            & + span {
+                &:before {
+                    animation: blob .85s linear forwards .2s;
+                }
+            }
+        }
+    }
+}
+ //end toggle switch 
+
 .cardOnline
 {
 color:lightgreen !important;
@@ -15844,7 +15950,7 @@ color:orange !important;
     .wrapper {
         position: relative;
         top: 0;
-        height: 100vh;
+        height: auto;
     }
 
     .sidebar {
