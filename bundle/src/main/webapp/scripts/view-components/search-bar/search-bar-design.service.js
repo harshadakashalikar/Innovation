@@ -49,86 +49,86 @@
               group: 'general',
               index: 1
             },
-            textFieldID: {
-              label: 'textFieldID',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 2
-            },
-            icon: {
-              label: 'icon',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 3
-            },
-            serviceRequestURL: {
-              label: 'Service Request URL',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 4
-            },
-            category: {
-              label: 'category',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 5
-            },
-            policyrecordDefinitionName: {
-              label: 'Policy Article Record Definition Name',
-              type: 'rx-inspector-definition-picker', //  special editor for selecting definitions (inspector). This one is an OOTB to pick up a record definition.
-              definitionType: RX_DEFINITION_PICKER.definitionTypes.regularRecord.type, //  define which definition user can select
-              group: 'general',
-              index: 6
-            },
-            policyname: {
-              label: 'Policy Name',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 7
-            },
-            policyurl: {
-              label: 'Policy URL',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 8
-            },
-            policyIcon: {
-              label: 'Policy Icon FieldID',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 9
-            },
-            articlerecordDefinitionName: {
-              label: 'Knowledge Article Record Definition Name',
-              type: 'rx-inspector-definition-picker', //  special editor for selecting definitions (inspector). This one is an OOTB to pick up a record definition.
-              definitionType: RX_DEFINITION_PICKER.definitionTypes.regularRecord.type, //  define which definition user can select
-              group: 'general',
-              index: 10
-            },
-            articlename: {
-              label: 'Article Name',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 11
-            },
-            articleurl: {
-              label: 'Article URL',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 12
-            },
-            articleIcon: {
-              label: 'Article Icon FieldID',
-              type: 'rx-inspector-expression-node-field',
-              group: 'general',
-              index: 13
-            }/*,
-                        searchText: {
-                            label: 'searchText',
-                            type: 'rx-inspector-expression-node-field',
-                            group: 'general',
-                            index: 4
-                        }*/
+            // textFieldID: {
+            //   label: 'textFieldID',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 2
+            // },
+            // icon: {
+            //   label: 'icon',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 3
+            // },
+            // serviceRequestURL: {
+            //   label: 'Service Request URL',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 4
+            // },
+            // category: {
+            //   label: 'category',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 5
+            // },
+            // policyrecordDefinitionName: {
+            //   label: 'Policy Article Record Definition Name',
+            //   type: 'rx-inspector-definition-picker', //  special editor for selecting definitions (inspector). This one is an OOTB to pick up a record definition.
+            //   definitionType: RX_DEFINITION_PICKER.definitionTypes.regularRecord.type, //  define which definition user can select
+            //   group: 'general',
+            //   index: 6
+            // },
+            // policyname: {
+            //   label: 'Policy Name',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 7
+            // },
+            // policyurl: {
+            //   label: 'Policy URL',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 8
+            // },
+            // policyIcon: {
+            //   label: 'Policy Icon FieldID',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 9
+            // },
+            // articlerecordDefinitionName: {
+            //   label: 'Knowledge Article Record Definition Name',
+            //   type: 'rx-inspector-definition-picker', //  special editor for selecting definitions (inspector). This one is an OOTB to pick up a record definition.
+            //   definitionType: RX_DEFINITION_PICKER.definitionTypes.regularRecord.type, //  define which definition user can select
+            //   group: 'general',
+            //   index: 10
+            // },
+            // articlename: {
+            //   label: 'Article Name',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 11
+            // },
+            // articleurl: {
+            //   label: 'Article URL',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 12
+            // },
+            // articleIcon: {
+            //   label: 'Article Icon FieldID',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 13
+            // },
+            // searchText: {
+            //   label: 'searchText',
+            //   type: 'rx-inspector-expression-node-field',
+            //   group: 'general',
+            //   index: 4
+            // }
           }
         },
         groups: {
