@@ -17,7 +17,7 @@
         ApplicationName: componentDefinition.propertiesByName.ApplicationName,
         Description: componentDefinition.propertiesByName.Description,
 
-        recordGrid: componentDefinition.propertiesByName.recordGrid,
+        recordFlag: componentDefinition.propertiesByName.recordFlag,
         cardActionGuid: componentDefinition.propertiesByName.cardActionGuid,
         cardSorting: componentDefinition.propertiesByName.cardSorting,
         cardOrder: componentDefinition.propertiesByName.cardOrder,
@@ -186,13 +186,6 @@
               type: 'rx-inspector-expression-node-field',
               group: 'Card',
               index: 14
-            },
-
-            recordGrid: {
-              label: 'Card-List GUID',
-              type: 'rx-inspector-expression-node-field',
-              group: 'Card',
-              index: 15
             },
 
             cardActionGuid: {

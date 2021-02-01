@@ -12,6 +12,8 @@
     'com.vyom.vyomlib.view-components.bar',         // Bar chart vc
     'com.vyom.vyomlib.view-components.gantt',       //gantt chart VC
     'com.vyom.vyomlib.view-components.nvd3-chart',
-    'com.vyom.vyomlib.view-components.landing-console'
+    'com.vyom.vyomlib.view-components.landing-console',
+    'com.vyom.vyomlib.view-components.test-vc1',    //hierarchy
+    'com.vyom.vyomlib.view-components.search-bar',    //search Bar
   ]);
 })();

@@ -32,14 +32,14 @@
 
               $scope.FilterExp = _config.FilterExp;
               $scope.Views = _config.Views;
-              $scope.recordGrid = _config.recordGrid;
+              $scope.recordFlag = 'false';
               $scope.cardActionGuid = _config.cardActionGuid;
               $scope.cardSorting = _config.cardSorting;
               $scope.cardOrder = _config.cardOrder;
               $scope.cardStatus = _config.cardStatus;
               $scope.cardFavourite = _config.cardFavourite;
               $scope.cardScope = _config.cardScope;
-
+              $scope.mydata = [];
               $scope.rateMeActionGuid = _config.rateMeActionGuid;
               $scope.ratingCount = _config.ratingCount;
 
@@ -67,9 +67,8 @@
               $scope.CurrentUserLoginName = rxCurrentUser.get().loginName;
               $scope.RecDef = "com.bmc.arsys.rx.foundation:Person";
 
-              $scope.show_hide_recordGrid();
-
               $scope.getCardList();
+              $scope.show_hide_recordGrid();
             };
             $scope.setUrlTOModal = function (indexurl) {
               $scope.SetModalURL = indexurl;
@@ -95,10 +94,10 @@
 
               foo.get(100, 0, queryParams).then(
                 function (allRecords) {
-                  var mydata = allRecords.data;
+                  $scope.mydata = allRecords.data;
                   if ($scope.cardOrder == "true") {
 
-                    $scope.cardList = mydata.sort(function (a, b) {
+                    $scope.cardList = $scope.mydata.sort(function (a, b) {
                       return b[$scope.cardSorting] - a[$scope.cardSorting];
                     });
                   } else {
@@ -181,6 +180,7 @@
             $scope.clearSearchContainer = function () {
               $scope.query = "";
             }
+
             $scope.filterCards = function (filterinput) {
               $scope.query = filterinput;
             }
@@ -201,7 +201,6 @@
                 var buttonGuid = rxString.format('rx-action-button[rx-view-component-id=\'%s\'] > button', guid);
 
                 button = $document.find(buttonGuid);
-
 
                 if (button) {
                   button.click();
@@ -238,7 +237,7 @@
                     record.setValue($scope.cardFavourite, favouriteValue);
                     record.put();
                     rxNotificationMessage.success("Saved Successfully!!");
-
+                    $scope.getCardList();
                   }
                 );
               }
@@ -253,23 +252,48 @@
               }
             }
 
-            //List-card Guid 
+            $scope.sortByViews = function () {
+              console.log("Selected value:" + $scope.selectedValue);
+
+              if ($scope.selectedValue == "clear") {
+                $(function () {
+                  $(".selector").show();
+                  $scope.getCardList();
+                });
+              }
+              if ($scope.selectedValue == "fav") {
+                $(function () {
+                  $(".selector").filter(function () {
+                    return $('span', this).hasClass('d-icon-heart_o');
+                  }).hide();
+                });
+              }
+              else if ($scope.selectedValue == "status") {
+                $(function () {
+                  $(".selector").filter(function () {
+                    return $('span', this).hasClass('cardOffline');
+                  }).hide();
+                });
+              }
+              else {
+                $scope.cardList = $scope.mydata.sort(function (a, b) {
+                  console.log(a.CardAvailibilty);
+                  return b[$scope.selectedValue] - a[$scope.selectedValue];
+                });
+              }
+            }
+
+            //List-card
             $scope.show_hide_recordGrid = function () {
-              console.log("Function called");
-              $timeout(function () {
+              $scope.recordFlag = ($scope.recordFlag == 'false') ? 'true' : 'false';
 
-                var recordGrid = rxString.format('rx-container[rx-view-component-id=\'%s\'] > container', $scope.recordGrid);
-
-                $scope.Guid = $document.find(recordGrid);
-                console.log(recordGrid);
-                if ($scope.Guid) {
-                  console.log($scope.Guid);
-                }
-                else {
-                  rxNotificationMessage.error('Cannot find button ' + $scope.recordGrid);
-                }
+              console.log($scope.recordFlag);
+              $scope.eventManager.propertyChanged({
+                property: 'recordFlag',
+                newValue: $scope.recordFlag
               });
             };
+
             init();
           }
 

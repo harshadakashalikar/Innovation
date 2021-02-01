@@ -34,6 +34,18 @@ body {
         }
     }
 }
+//filter dropdown
+select {
+  width: 150px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  height: 34px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+//end filter dropdown
 
 //toggle switch 
 $lightgreen:#00bcd4;
@@ -44,15 +56,15 @@ $purple: #9c27b0;
     input {
         display: none;
         & + span {
-            width: 68px;
+            width: 70px;
             height: 30px;
             border-radius: 14px;
             transition: all .3s ease;
             display: block;
             position: relative;
-            background: $lightgreen;
+            // background: $lightgreen;
             color: black;
-            box-shadow: 0 8px 16px -1px rgba($lightgreen, .2);
+            box-shadow: 0 8px 16px -1px rgba(0,0,0,0.12);
             &:before,
             &:after {
                 content: '';
@@ -66,7 +78,7 @@ $purple: #9c27b0;
                 width: 18px;
                 height: 18px;
                 border-radius: 9px;
-                border: 5px solid #fff;
+                border: 5px solid black;
             }
             &:after {
                 top: 5px;

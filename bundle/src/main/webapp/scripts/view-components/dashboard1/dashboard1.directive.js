@@ -186,6 +186,7 @@
               });
               // location.reload(true);
               // $("#Table2").load(window.location.href + " #Table2");
+
               $scope.get();
               return false;
             });

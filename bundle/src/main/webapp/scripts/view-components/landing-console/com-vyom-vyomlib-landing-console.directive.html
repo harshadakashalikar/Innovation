@@ -7,13 +7,7 @@
 </script> -->
 
 <style>
-  .color-black {
-    color: black;
-  }
 
-  .color-white {
-    color: white;
-  }
 </style>
 
 <div class="wrapper">
@@ -77,7 +71,38 @@
   <div class="container-fluid" style="padding-bottom: 0px; padding-top: 10px">
     <div class="text-center">
       <span>
-        <button class="w3-button w3-hover-purple w3-round-xxlarge  w3-{{CategoryColor}} w3-card"
+        <!-- sort-by dropdown -->
+        <label class="hideme" style="vertical-align: bottom;float: left; color:black; "> Sort By:
+        </label>
+        <select class="hideme" ng-model="selectedValue" ng-change="sortByViews()" style="margin-left: 10px;float:left;">
+          <option value="" selected="selected">-select-</option>
+          <option value="fav">Favourites</option>
+          <option value={{Views}}>Max-views</option>
+          <option value={{ratingCount}}>Max-ratings</option>
+          <option value="status">Active</option>
+          <option value="clear">Clear</option>
+          <tbody>
+            <!---->
+            <tr>
+              <td>user_card</td>
+              <td><span class="bigfont d-icon-user_card"></span></td>
+            </tr>
+            <!---->
+            <tr>
+              <td>user_check</td>
+              <td><span class="bigfont d-icon-user_check"></span></td>
+            </tr>
+            <!---->
+            <tr>
+              <td>user_check_circle</td>
+              <td><span class="bigfont d-icon-user_check_circle"></span></td>
+            </tr>
+
+            <!---->
+          </tbody>
+        </select>
+
+        <button class="w3-button w3-hover-purple w3-round-xxlarge w3-{{CategoryColor}} w3-card"
           style="margin-right: 5px;margin-bottom: 10px" ng-if="Category1"
           ng-click="filterCards(Category1)">{{Category1}}</button>
         <button class="w3-button w3-hover-purple w3-round-xxlarge w3-{{CategoryColor}} w3-card"
@@ -104,21 +129,21 @@
 
         <!-- switch button -->
         <label class="switch" style="vertical-align: bottom;">
-          <input type="checkbox" ng-model="vm.isActive">
+          <input type="checkbox" ng-model="vm.isActive" ng-change="show_hide_recordGrid()">
           <span class="slider round hide-off" style="padding-top: 5px;margin-bottom: 10px">
             <span ng-class=" { 'off' : !vm.isActive } ">{{vm.isActive ? 'Card' : 'List'}}</span>
           </span>
         </label>
         <!-- end switch button -->
       </span>
-
     </div>
   </div>
   <div class="content hideme">
     <div class="container-fluid">
-      <div class="row" ng-init="limit = 6">
-        <div class="col-lg-4 col-md-4 col-sm-4" ng-repeat="x in cardList  | filter:query  | limitTo: limit as results">
-          <div class="card card-stats w3-card-4 h-75 ">
+      <div class="row" id="reverse" ng-init="limit = 6">
+        <div class="selector col-lg-4 col-md-4 col-sm-4"
+          ng-repeat="x in cardList  | filter:query  | limitTo: limit as results">
+          <div class="card card-stats w3-card-4 h-75">
             <div class="card-header card-header-{{x[Color]}} card-header-icon h-75 ">
               <div
                 ng-click="setSelectedCardInstanceId(x[179]);executeAction(cardActionGuid);updateViewsCounter(x[179],x[Views])"
@@ -217,3 +242,11 @@
     }
   });
 </script>
+
+
+
+<p class="card-category" style="float: left;left:0;margin-left: 8px;margin-bottom: 0px;margin-top: -10px">
+  <span ng-if="x[cardStatus]" class="d-icon-circle" ng-class="getCardStatusCSS(x[cardStatus])"
+    style="margin-right: 5px;font-size: 21px" rel="tooltip" title="{{x[cardStatus]}}" ng-mouseover="hoverIn('tooltip')">
+  </span>
+</p>
